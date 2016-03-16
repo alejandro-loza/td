@@ -1,0 +1,28 @@
+<main role="main" class="site-main">
+  <section class="section">
+    <div class="section-content">
+      <h2>Contactos {{model}}</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Compañía</th>
+            <th>Correo electrónico</th>
+            <th>Teléfono</th>
+          </tr>
+        </thead>
+        <tbody>
+
+         {{#each model as |contact| }}
+            <tr>
+              <td>{{ contact.contacto }}</td>
+              <td>{{ contact.test }}</td>
+              <td>{{ contact.email }}</td>
+              <td>{{ contact.tel }}</td>
+            </tr>
+         {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
