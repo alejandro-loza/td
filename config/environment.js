@@ -27,6 +27,16 @@ module.exports = function(environment) {
     }
   };
 
+  //configure Torii 
+  ENV.torii = {
+    providers: {
+      'google-oauth2': {
+        apiKey: "850796035254-j615vfpf98738l9eog82sqsiqdmbjnbu.apps.googleusercontent.com",
+        redirectUri: "http://localhost:4200/oauth2callback"
+      }
+    }
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
