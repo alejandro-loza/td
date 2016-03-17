@@ -14,9 +14,9 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
       'default-src': "'none' http://tudu.m3x1c0.com/",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' http://tudu.m3x1c0.com:3000/ localhost:35729",
-      'font-src': "'self' 'unsafe-inline' 'unsafe-eval' data: http://fonts.gstatic.com",
-      'connect-src': "'self' http://tudu.m3x1c0.com:3000/ ws://localhost:35729",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' http://tudu.m3x1c0.com:3000/ localhost:35729  https://www.googleapis.com/ https://fonts.gstatic.com/",
+      'font-src': "'self' 'unsafe-inline' 'unsafe-eval' data: http://fonts.gstatic.com  https://www.googleapis.com/ https://fonts.gstatic.com/",
+      'connect-src': "'self' http://tudu.m3x1c0.com:3000/ ws://localhost:35729  https://www.googleapis.com/ https://fonts.gstatic.com/",
       'img-src': "'self'",
       'style-src': "'self' 'unsafe-inline' 'unsafe-eval' fonts.googleapis.com",
       'media-src': "'self'"
