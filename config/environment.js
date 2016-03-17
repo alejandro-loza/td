@@ -12,15 +12,7 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-    contentSecurityPolicy: {
-      'default-src': "'none' http://tudu.m3x1c0.com/",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' http://tudu.m3x1c0.com:3000/ localhost:35729",
-      'font-src': "'self' 'unsafe-inline' 'unsafe-eval' data: http://fonts.gstatic.com",
-      'connect-src': "'self' http://tudu.m3x1c0.com:3000/ ws://localhost:35729",
-      'img-src': "'self'",
-      'style-src': "'self' 'unsafe-inline' 'unsafe-eval' fonts.googleapis.com",
-      'media-src': "'self'"
-    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -33,7 +25,6 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.APP.REST_WSPREFIX = "http://tudu.m3x1c0.com:3000";
   }
 
   if (environment === 'test') {
