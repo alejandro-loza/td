@@ -18,10 +18,10 @@ export default Torii.extend({
 			type: 'POST',
 			host: 'www.googleapis.com',			
 			contentType: 'application/x-www-form-urlencoded',
-			data: 'code=' + data.authorizationCode + '&'+
-				  'client_id=' + config.torii.providers['google-oauth2'].apiKey + '&'+
-				  'client_secret=me2c8LDcLMwjDOi6XAmU8nuf&'+
-				  'redirect_uri=' + data.redirectUri + '&'+
+			data: 'code=' + data.authorizationCode + '&' +
+				  'client_id=' + config.torii.providers['google-oauth2'].apiKey + '&' +
+				  'client_secret=' + config.torii.providers['google-oauth2'].secretKey + '&' +
+				  'redirect_uri=' + config.torii.providers['google-oauth2'].redirectUri + '&' +
 				  'grant_type=authorization_code'
 		})
 		.done(function(response) {

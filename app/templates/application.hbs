@@ -4,9 +4,9 @@
 		<h2 id="title" style="text-align: center">AUTENTIFICACIÓN</h2>
 			<div style="text-align: center">
 				{{#if session.isAuthenticated}}
-				<a {{action 'invalidateSession'}}>Salir</a>
+					<a {{action 'invalidateSession'}}>Salir</a>
 				{{else}}
-				<a {{action 'authenticateSession'}}>Entrar con mi cuenta de google</a>
+					<a {{action 'authenticateSession'}}>Entrar con mi cuenta de google</a>
 				{{/if}}
 			</div>
 		</div>

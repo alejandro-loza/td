@@ -31,7 +31,8 @@ module.exports = function(environment) {
   ENV.torii = {
     providers: {
       'google-oauth2': {
-        apiKey: "850796035254-j615vfpf98738l9eog82sqsiqdmbjnbu.apps.googleusercontent.com",
+        apiKey: "850796035254-j615vfpf98738l9eog82sqsiqdmbjnbu.apps.googleusercontent.com",        
+        secretKey: "me2c8LDcLMwjDOi6XAmU8nuf",
         redirectUri: "http://localhost:4200/oauth2callback"
       }
     }
