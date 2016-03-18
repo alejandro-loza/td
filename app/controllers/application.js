@@ -8,6 +8,8 @@ export default Ember.Controller.extend({
     },
     invalidateSession() {
         this.get('session').invalidate();
+        //console.log('salir');
+        //$('.uno').remove();        
     }
   }
 });
