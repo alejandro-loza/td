@@ -12,11 +12,10 @@ export default Ember.ArrayController.extend({
     if( calendario.get('startFull') !== undefined ) {
         return calendario.get('startFull').match(rx);
       }
-    });        
+    });
   }.property('arrangedContent', 'filter', 'arrangedContent.@each'),
   actions: {
     addEvent: function() {
-      console.log('afdasfasdfasdf')
       this.transitionToRoute('/calendarios/new');
     }
   }

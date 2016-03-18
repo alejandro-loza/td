@@ -5,7 +5,7 @@ export default Ember.Route.extend({
 	model: function() {		
 		var calendarios = Ember.ArrayProxy.create({ content: [] }); 
 		$.ajax({
-			url: config.APP.REST_WSPREFIX + '/api/users/eventos?accessToken2=ya29.qQKa9QpJTqzJH1aF4aAwttTwyTAfRIL6RCTW_DH8M-QmZ7jCRnT65GuL_wf33lpTiUc',
+			url: config.APP.REST_WSPREFIX + '/api/users/eventos?accessToken2='+ config.APP.TOKEN,
 			type: 'GET'
 		}).then(function(data) {
 			var items = data.eventList.items;
