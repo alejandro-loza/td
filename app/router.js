@@ -9,27 +9,27 @@ Router.map(function() {
   this.route('home');
 
   this.resource('contactos', function() {
-    this.route('new',  { path: '/new' });
+    this.route('new');
     this.route('show', { path: '/show/:contacto_id' });
     this.route('edit', { path: '/edit/:contacto_id' });
   });
 
-  this.resource('calendars', function() {
+  this.resource('calendarios', function() {
     this.route('new');
-    this.route('show', { path: '/show/:calendar_id' });
-    this.route('edit', { path: '/edit/:calendar_id' });
+    this.route('show', { path: '/show/:calendario_id' });
+    this.route('edit', { path: '/edit/:calendario_id' });
   });
 
-  this.resource('tasks', function() {
+  this.resource('tareas', function() {
     this.route('new');
-    this.route('show', { path: '/show/:task_id' });
-    this.route('edit', { path: '/edit/:task_id' });
+    this.route('show', { path: '/show/:tarea_id' });
+    this.route('edit', { path: '/edit/:tarea_id' });
   });
 
-  this.resource('notes', function() {
+  this.resource('notas', function() {
     this.route('new');
-    this.route('show', { path: '/show/:note_id' });
-    this.route('edit', { path: '/edit/:note_id' });
+    this.route('show', { path: '/show/:nota_id' });
+    this.route('edit', { path: '/edit/:nota_id' });
   });
 
 });

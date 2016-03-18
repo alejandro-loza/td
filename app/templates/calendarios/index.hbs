@@ -1,0 +1,27 @@
+<main class="site-main">
+  <section class="section">
+    <div class="section-content">
+      <h2 class="pull-left">Calendarios</h2>
+      <button type="button" class="btn btn-default pull-right" {{action 'addEvent'}}><span class="glyphicon glyphicon-plus"></span></button>
+      <div class="form-group col-md-3 pull-right">        
+        {{input type='text' value=filter placeholder='Filtrar' class='filter-input form-control hasDatepicker'}}
+        <span class="fa fa-calendar form-control-feedback"></span>        
+      </div>
+      {{ outlet 'calendarios/new'}}
+      <div class="cards row">
+        <div class="col-md-12">
+        {{#each filteredContent as |calendario| }}
+        <div class="col-md-3">
+          <div class="card card-block" style="border: 1px solid #ececec; padding: 10px 14px; border-radius: 6px; height: 300px; overflow: hidden;">
+            <h4 class="card-title">{{calendario.summary}}</h4>
+            <p class="card-text" style="font-size: 0.8em;">{{calendario.description}}</p>
+            <p class="card-small" style="font-size: 0.8em;">{{calendario.startDate}} {{calendario.startTime}}<br>{{calendario.endDate}} {{calendario.endTime}}</p>
+            <a href="#" class="card-link">{{calendario.location}}</a>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,3 +1,29 @@
-<h2 id="title">Welcome to Ember</h2>
-
+<header class="site-header">
+  <div class="section-content">
+    <div class="site-header__logo"><img src="images/logo.png" alt="Logotipo de TooDoo"></div>
+    <!-- h1>Registro de contactos</h1 -->
+  </div>
+</header>
+<nav class="site-nav">
+  <div class="section-content">
+    <ul>
+      <li><a href="calendarios" title="calendario">Calendario</a></li>
+      <li><a href="contactos/new" title="Registro" class="active">Registro</a></li>
+      <li><a href="contactos" title="Lista de contactos">Contactos</a></li>
+      <!-- li><a href="notas" title="Lista de notas">Notas</a></li -->
+      <li><a href="tareas" title="Lista de tareas">Tareas</a></li>
+      <li class="pull-right">
+       {{#if session.isAuthenticated}}
+         <a {{action 'invalidateSession'}}>Salir</a>
+        {{else}}
+         <a {{action 'authenticateSession'}}>Entrar con mi cuenta de google</a>
+        {{/if}}
+      </li>
+    </ul>
+  </div>
+</nav>    
 {{outlet}}
+
+<footer class="site-footer">
+  <div class="section-content"><small>Todos los derechos reservados 2016 &copy; TooDoo</small></div>
+</footer>

@@ -13,13 +13,22 @@ module.exports = function(environment) {
       }
     },
     contentSecurityPolicy: {
-      'default-src': "'none' http://tudu.m3x1c0.com/",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' http://tudu.m3x1c0.com:3000/ localhost:35729",
-      'font-src': "'self' 'unsafe-inline' 'unsafe-eval' data: http://fonts.gstatic.com https://fonts.gstatic.com",
-      'connect-src': "'self' http://tudu.m3x1c0.com:3000/ ws://localhost:35729 http://tudu.m3x1c0.com:3000/api/ ",
-      'img-src': "'self'",
-      'style-src': "'self' 'unsafe-inline' 'unsafe-eval' fonts.googleapis.com https://fonts.gstatic.com",
+      'default-src': "'self' http://tudu.m3x1c0.com/",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' https://www.googleapis.com http://tudu.m3x1c0.com:3000/ https://framework-gb.cdn.gob.mx localhost:35729 https://fonts.gstatic.com/",
+      'font-src': "'self' 'unsafe-inline' 'unsafe-eval' data: http://fonts.gstatic.com/ https://fonts.gstatic.com/ ",
+      'connect-src': "'self' http://tudu.m3x1c0.com:3000/ https://www.googleapis.com https://framework-gb.cdn.gob.mx ws://localhost:35729 https://fonts.gstatic.com/",
+      'img-src': "'self' https://framework-gb.cdn.gob.mx",
+      'style-src': "'self' 'unsafe-inline' 'unsafe-eval' https://www.googleapis.com https://framework-gb.cdn.gob.mx fonts.googleapis.com ",
       'media-src': "'self'"
+    },
+    torii: {
+      providers: {
+        'google-oauth2': {
+          apiKey: "850796035254-j615vfpf98738l9eog82sqsiqdmbjnbu.apps.googleusercontent.com",        
+          secretKey: "me2c8LDcLMwjDOi6XAmU8nuf",
+          redirectUri: "http://localhost:4200/oauth2callback"
+        }
+      }
     },
     APP: {
       // Here you can pass flags/options to your application instance
@@ -27,13 +36,27 @@ module.exports = function(environment) {
     }
   };
 
+  //configure Torii 
+  /*ENV.torii = {
+    sessionServiceName: 'session',
+    providers: {
+      'google-oauth2': {
+        apiKey: "850796035254-j615vfpf98738l9eog82sqsiqdmbjnbu.apps.googleusercontent.com",        
+        secretKey: "me2c8LDcLMwjDOi6XAmU8nuf",
+        redirectUri: "http://localhost:4200/oauth2callback"
+      }
+    }
+  };*/
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.APP.REST_WSPREFIX = "http://tudu.m3x1c0.com:3000";
+    ENV.APP.LS = 'toodoo-desktop:auth-manager-v1.0';
+    ENV.APP.REST_WSPREFIX = "http://tudu.m3x1c0.com:3000"; 
+    ENV.APP.TOKEN = "ya29.qQIDVrXqpLDxk4u2MUjuGV6Ytzq4VJhfegiMhQNQKi6jwzc7VPjjyIXTe6ZLrmrjDKU";
   }
 
   if (environment === 'test') {

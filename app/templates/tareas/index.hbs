@@ -1,0 +1,25 @@
+<main role="main" class="site-main">
+  <section class="section">
+    <div class="section-content">
+      <h2>Tareas</h2>
+      <table class="table">
+      	<thead>
+      		<tr>
+  				<th>Titulo</th>
+  				<th>Actualizado</th>
+  				<th>Link</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		{{#each model as |task| }}
+      			<tr>
+      				<td>{{task.title}}</td>
+      				<td>{{task.updated}}</td>
+      				<td>{{task.selfLink}}</td>
+      			</tr>
+      		{{/each}}
+      	</tbody>
+      </table>
+    </div>
+  </section>
+</main>

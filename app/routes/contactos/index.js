@@ -20,10 +20,8 @@ export default Ember.Route.extend({
 				var element = Ember.ArrayProxy.create( {contacto: entry[i]["title"]["$t"] , test: "pruebas", email: entry[i]["gd$email"][0]["address"] });
 				controller.get('content').pushObject(element);
 			};
-
 		})
 		.fail(function() {
-			alert('fail');
 		});
 
 		var test = Ember.ArrayProxy.create({ content: controller.get('content')});
