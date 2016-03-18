@@ -4,7 +4,9 @@ import config from '../config/environment';
 const { service } = Ember.inject;
 
 export default Ember.Route.extend({
-  beforeModel: function() {
-    var localItem = JSON.parse(localStorage[config.APP.LS]);    
-  }
+	beforeModel: function() {
+		if( localStorage[config.APP.LS] != null ) {
+			var localItem = JSON.parse(localStorage[config.APP.LS]);  
+		} 
+	}
 });
