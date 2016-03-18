@@ -14,10 +14,10 @@ Router.map(function() {
     this.route('edit', { path: '/edit/:contacto_id' });
   });
 
-  this.resource('calendars', function() {
+  this.resource('calendarios', function() {
     this.route('new');
-    this.route('show', { path: '/show/:calendar_id' });
-    this.route('edit', { path: '/edit/:calendar_id' });
+    this.route('show', { path: '/show/:calendario_id' });
+    this.route('edit', { path: '/edit/:calendario_id' });
   });
 
   this.resource('tasks', function() {

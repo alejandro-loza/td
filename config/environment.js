@@ -14,27 +14,16 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
       'default-src': "'none' http://tudu.m3x1c0.com/",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' http://tudu.m3x1c0.com:3000/ localhost:35729  https://www.googleapis.com/ https://fonts.gstatic.com/",
-      'font-src': "'self' 'unsafe-inline' 'unsafe-eval' data: http://fonts.gstatic.com  https://www.googleapis.com/ https://fonts.gstatic.com/",
-      'connect-src': "'self' http://tudu.m3x1c0.com:3000/ ws://localhost:35729  https://www.googleapis.com/ https://fonts.gstatic.com/",
-      'img-src': "'self'",
-      'style-src': "'self' 'unsafe-inline' 'unsafe-eval' fonts.googleapis.com",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' http://tudu.m3x1c0.com:3000/ https://framework-gb.cdn.gob.mx localhost:35729",
+      'font-src': "'self' 'unsafe-inline' 'unsafe-eval' data: http://fonts.gstatic.com",
+      'connect-src': "'self' http://tudu.m3x1c0.com:3000/ https://framework-gb.cdn.gob.mx ws://localhost:35729",
+      'img-src': "'self' https://framework-gb.cdn.gob.mx",
+      'style-src': "'self' 'unsafe-inline' 'unsafe-eval' https://framework-gb.cdn.gob.mx fonts.googleapis.com",
       'media-src': "'self'"
     },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
-  };
-
-  //configure Torii 
-  ENV.torii = {
-    providers: {
-      'google-oauth2': {
-        apiKey: "850796035254-j615vfpf98738l9eog82sqsiqdmbjnbu.apps.googleusercontent.com",        
-        secretKey: "me2c8LDcLMwjDOi6XAmU8nuf",
-        redirectUri: "http://localhost:4200/oauth2callback"
-      }
     }
   };
 
@@ -44,7 +33,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.APP.REST_WSPREFIX = "http://tudu.m3x1c0.com:3000";
+    ENV.APP.REST_WSPREFIX = "http://tudu.m3x1c0.com:3000";    
   }
 
   if (environment === 'test') {
