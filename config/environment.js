@@ -37,7 +37,7 @@ module.exports = function(environment) {
   };
 
   //configure Torii 
-  /*ENV.torii = {
+ /* ENV.torii = {
     sessionServiceName: 'session',
     providers: {
       'google-oauth2': {
@@ -56,7 +56,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.APP.LS = 'toodoo-desktop:auth-manager-v1.0';
     ENV.APP.REST_WSPREFIX = "http://tudu.m3x1c0.com:3000"; 
-    ENV.APP.TOKEN = "ya29.qQIDVrXqpLDxk4u2MUjuGV6Ytzq4VJhfegiMhQNQKi6jwzc7VPjjyIXTe6ZLrmrjDKU";
+    ENV.APP.TOKEN = "ya29.qQIWvDXD-21x1zqpdCiIw4YeUctROzfd8HJXRc5DBMm4dlQkLg01dBP2MlRNI-qchyk";
   }
 
   if (environment === 'test') {
