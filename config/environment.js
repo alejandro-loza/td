@@ -21,11 +21,32 @@ module.exports = function(environment) {
       'style-src': "'self' 'unsafe-inline' 'unsafe-eval' https://www.googleapis.com https://framework-gb.cdn.gob.mx fonts.googleapis.com",
       'media-src': "'self'"
     },
+    torii: {
+      providers: {
+        'google-oauth2': {
+          apiKey: "850796035254-j615vfpf98738l9eog82sqsiqdmbjnbu.apps.googleusercontent.com",        
+          secretKey: "me2c8LDcLMwjDOi6XAmU8nuf",
+          redirectUri: "http://localhost:4200/oauth2callback"
+        }
+      }
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
     }
   };
+
+  //configure Torii 
+  /*ENV.torii = {
+    sessionServiceName: 'session',
+    providers: {
+      'google-oauth2': {
+        apiKey: "850796035254-j615vfpf98738l9eog82sqsiqdmbjnbu.apps.googleusercontent.com",        
+        secretKey: "me2c8LDcLMwjDOi6XAmU8nuf",
+        redirectUri: "http://localhost:4200/oauth2callback"
+      }
+    }
+  };*/
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -33,6 +54,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LS = 'toodoo-desktop:auth-manager-v1.0';
     ENV.APP.REST_WSPREFIX = "http://tudu.m3x1c0.com:3000"; 
     ENV.APP.TOKEN = "ya29.qQIDVrXqpLDxk4u2MUjuGV6Ytzq4VJhfegiMhQNQKi6jwzc7VPjjyIXTe6ZLrmrjDKU";
   }

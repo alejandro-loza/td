@@ -12,19 +12,16 @@
       <li><a href="contactos" title="Lista de contactos">Contactos</a></li>
       <!-- li><a href="notas" title="Lista de notas">Notas</a></li -->
       <li><a href="tareas" title="Lista de tareas">Tareas</a></li>
-    </ul>
-  </div>
-</nav>
-    <h2 id="title" style="text-align: center">AUTENTIFICACIÓN</h2>
-      <div style="text-align: center">
-        {{#if session.isAuthenticated}}
+      <li class="pull-right">
+       {{#if session.isAuthenticated}}
          <a {{action 'invalidateSession'}}>Salir</a>
         {{else}}
          <a {{action 'authenticateSession'}}>Entrar con mi cuenta de google</a>
         {{/if}}
-      </div>
-
-
+      </li>
+    </ul>
+  </div>
+</nav>    
 {{outlet}}
 
 <footer class="site-footer">
