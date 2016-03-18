@@ -1,0 +1,31 @@
+<main class="site-main">
+  <section class="section">
+    <div class="section-content">
+	  <h2>Nuevo evento</h2>
+	  <form id="newEvent" action="#" class="form">
+	  	<div class="row">
+          <div class="col-md-6">
+          	<div class="form__element">
+          		<label>Evento</label>
+          		{{input type="text" id="summary" name="summary" class="input-text"}}
+          	</div>
+          	<div class="form__element">
+          		<label>Fecha inicio</label>
+          		{{input type="text" id="startDate" class="hasDatepicker col-md-6 input-text"}}
+          		{{input type="text" id="startTime" class="input-text col-md-6"}}
+          	</div>
+          	<div class="form__element">
+          		<label>Fecha Fin</label>
+          		{{input type="text" id="startDate" class="hasDatepicker input-text"}}
+          		{{input type="text" id="endTime" class="input-text"}}
+          	</div>
+          </div>
+          <div class="col-md-6">
+          	<label>Descripción</label>
+          	{{textarea class="input-text" cols="6" rows="5"}}
+          </div>
+	  	</div>
+	  </form>
+    </div>
+  </section>
+</main>
