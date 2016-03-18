@@ -14,11 +14,11 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
       'default-src': "'none' http://tudu.m3x1c0.com/",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' http://tudu.m3x1c0.com:3000/ https://framework-gb.cdn.gob.mx localhost:35729",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' https://www.googleapis.com http://tudu.m3x1c0.com:3000/ https://framework-gb.cdn.gob.mx localhost:35729",
       'font-src': "'self' 'unsafe-inline' 'unsafe-eval' data: http://fonts.gstatic.com",
-      'connect-src': "'self' http://tudu.m3x1c0.com:3000/ https://framework-gb.cdn.gob.mx ws://localhost:35729",
+      'connect-src': "'self' http://tudu.m3x1c0.com:3000/ https://www.googleapis.com https://framework-gb.cdn.gob.mx ws://localhost:35729",
       'img-src': "'self' https://framework-gb.cdn.gob.mx",
-      'style-src': "'self' 'unsafe-inline' 'unsafe-eval' https://framework-gb.cdn.gob.mx fonts.googleapis.com",
+      'style-src': "'self' 'unsafe-inline' 'unsafe-eval' https://www.googleapis.com https://framework-gb.cdn.gob.mx fonts.googleapis.com",
       'media-src': "'self'"
     },
     APP: {
@@ -33,7 +33,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.APP.REST_WSPREFIX = "http://tudu.m3x1c0.com:3000";    
+    ENV.APP.REST_WSPREFIX = "http://tudu.m3x1c0.com:3000"; 
+    ENV.APP.TOKEN = "ya29.qQIDVrXqpLDxk4u2MUjuGV6Ytzq4VJhfegiMhQNQKi6jwzc7VPjjyIXTe6ZLrmrjDKU";
   }
 
   if (environment === 'test') {
