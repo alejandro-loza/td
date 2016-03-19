@@ -27,6 +27,7 @@ export default Torii.extend({
 			.done(function(response) {
 				console.log('Respuesta: ' + JSON.stringify(response));
 				console.log('accessToken: ' + response.access_token);
+				localStorage.setItem(config.APP.LS, response.access_token);
 				/*var msj = $("<h5 class='uno'/>");	
 				msj.text('AccessToken: ' + response.access_token);
 				msj.appendTo(".token_value");*/				
