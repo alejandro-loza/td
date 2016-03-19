@@ -13,12 +13,12 @@ module.exports = function(environment) {
       }
     },
     contentSecurityPolicy: {
-      'default-src': "'none' http://tudu.m3x1c0.com/",
+      'default-src': "'self' http://tudu.m3x1c0.com/",
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval' https://www.googleapis.com http://tudu.m3x1c0.com:3000/ https://framework-gb.cdn.gob.mx localhost:35729 https://fonts.gstatic.com/",
-      'font-src': "'self' 'unsafe-inline' 'unsafe-eval' data: http://fonts.gstatic.com https://fonts.gstatic.com/",
+      'font-src': "'self' 'unsafe-inline' 'unsafe-eval' data: http://fonts.gstatic.com/ https://fonts.gstatic.com/ ",
       'connect-src': "'self' http://tudu.m3x1c0.com:3000/ https://www.googleapis.com https://framework-gb.cdn.gob.mx ws://localhost:35729 https://fonts.gstatic.com/",
       'img-src': "'self' https://framework-gb.cdn.gob.mx",
-      'style-src': "'self' 'unsafe-inline' 'unsafe-eval' https://www.googleapis.com https://framework-gb.cdn.gob.mx fonts.googleapis.com",
+      'style-src': "'self' 'unsafe-inline' 'unsafe-eval' https://www.googleapis.com https://framework-gb.cdn.gob.mx fonts.googleapis.com ",
       'media-src': "'self'"
     },
     torii: {

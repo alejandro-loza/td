@@ -2,27 +2,19 @@
   <section class="section">
     <div class="section-content">
       <h2>Registro</h2>
-      <form id="newContact" action="#" method="post" novalidate class="form">
+      <div id="newContact"  novalidate class="form">
         <div class="row">
           <div class="col-md-6">
             <fieldset class="buttom-buffer">
               <legend>Datos personales</legend>
               <div class="form__element">
-                <label for="name">Nombre*</label>
-                <input id="name" type="text" name="name" required class="input-text">
+                <label for="givenName">Nombre*</label>
+                {{input id="givenName" value=givenName class="input-text" }}        
               </div>
               <div class="form__element">
-                <label for="lastName">Apellidos</label>
-                <input id="lastName" type="text" name="lastName" class="input-text">
-              </div>
-              <div class="form__element">
-                <label for="birthdate">Fecha de nacimiento</label>
-                <input id="birthdate" type="text" name="birthdate" class="input-text">
-              </div>
-              <div class="form__element">
-                <label for="company">Nombre de la empresa</label>
-                <input id="company" type="text" name="company" class="input-text">
-              </div>
+                <label for="familyName">Apellidos</label>
+                {{input id="familyName" value=familyName class="input-text"  }}          
+              </div>             
             </fieldset>
           </div>
           <div class="col-md-6">
@@ -30,33 +22,51 @@
               <legend>Datos de contacto</legend>
               <div class="form__element">
                 <div class="row">
+                  <div class="form__element">
+                    <label for="email">Correo electrónico</label>
+                    {{input id="email" type="email" value=email class="input-text"  }}      
+                  </div>
+                  <div class="form__element">
+                    <label for="displayName">Alias </label>
+                    {{input id="displayName"  value=displayName class="input-text"  }}     
+                  </div>
                   <div class="col-md-8">
-                    <label for="tel">Télefono</label>
-                    <input id="tel" type="tel" name="tel" class="input-text">
+                    <label for="phoneNumber">Télefono</label>
+                    {{input id="phoneNumber" type="number" value=phoneNumber class="input-text"  }}    
                   </div>
                   <div class="col-md-4">
-                    <label for="telExt">Extensión</label>
-                    <input id="telExt" type="tel" name="telExt" class="input-text">
+                    <label for="phoneNumberExt">Télefono Secundario</label>
+                    {{input id="phoneNumberExt" type="number" value=phoneNumberExt class="input-text"  }}    
                   </div>
-                </div>
-              </div>
-              <div class="form__element">
-                <label for="celPhone">Celular</label>
-                <input id="celPhone" type="tel" name="celPhone" class="input-text">
-              </div>
-              <div class="form__element">
-                <label for="email">Correo electrónico</label>
-                <input id="email" type="email" name="email" class="input-text">
-              </div>
-            </fieldset>
-          </div>
-          <div class="col-md-12">
-            <div class="text-right buttom-buffer">
-              <button id="sendNewContact" type="send" disabled class="input-btn input-btn__disabled">Guardar</button>
-            </div>
+                  <div class="col-md-4">
+                    <label for="city">Ciudad</label>
+                    {{input id="city"  value=city class="input-text"  }} 
+                  </div>
+                  <div class="col-md-4">
+                   <label for="region">Estado</label>
+                   {{input id="region" value=region class="input-text"  }} 
+                 </div>
+                 <div class="col-md-4">
+                   <label for="postcode">Código Postal</label>
+                   {{input id="postcode" value=postcode class="input-text"  }}
+                 </div>
+                 <div class="col-md-4">
+                   <label for="country">País</label>
+                   {{input id="country" value=country class="input-text"  }}
+
+                 </div>
+               </div>
+             </div>
+
+           </fieldset>
+         </div>
+         <div class="col-md-12">
+          <div class="text-right buttom-buffer">
+            <button id="sendButton" type="button" {{action 'send'}} class="input-btn" >Guardar</button>
           </div>
         </div>
-      </form>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 </main>
