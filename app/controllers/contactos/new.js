@@ -17,7 +17,7 @@ export default Ember.ArrayController.extend({
 		send: function(){
 			var parameters = this.getProperties("givenName", "familyName", "email", "displayName", "phoneNumber", "phoneNumberExt", "country","city", "region", "postcode");
 			var xml = xmlConstructor(parameters);
-			var accessToken = 'ya29.qQKeP5AObnNm-xXVOKx8wjCLARp9VP7LBD7kibqLp7vL6cSzXGD1VRAY5ZQsSaznipw';
+            var accessToken = parseInt(localStorage.getItem("accessToken"));
 			var formData = new FormData();
 			formData.append('accessToken', accessToken);
 			formData.append('contacto', xml);
