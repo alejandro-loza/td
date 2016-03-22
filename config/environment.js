@@ -54,7 +54,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.APP.LS = 'toodoo-token';
+    ENV.APP.LS = 'ember_simple_auth:session';
     ENV.APP.REST_WSPREFIX = "http://tudu.m3x1c0.com:3000"; 
     ENV.APP.TOKEN = "ya29.qQIWvDXD-21x1zqpdCiIw4YeUctROzfd8HJXRc5DBMm4dlQkLg01dBP2MlRNI-qchyk";
   }

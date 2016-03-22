@@ -6,7 +6,7 @@ export default Ember.Route.extend({
 	model: function() {
 
         var controller = this;
-        var accessToken = parseInt(localStorage.getItem("toodoo-token"));
+        var accessToken = localStorage.getItem("accessToken");
   		Ember.$.ajax({
             url:'http://tudu.m3x1c0.com:3000/api/users/contactos?accessToken=' + accessToken,
 			type: 'GET',
