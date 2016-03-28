@@ -5,9 +5,11 @@ import moment from 'moment';
 
 export default Ember.Route.extend({
 	model: function() {		
-		var calendarios = Ember.ArrayProxy.create({ content: [] }); 
+		var calendarios = Ember.ArrayProxy.create({ content: [] });
+		var accessToken = localStorage.getItem("accessToken");
+		 
 		$.ajax({
-			url: config.APP.REST_WSPREFIX + '/api/users/eventos?accessToken2='+ config.APP.TOKEN,
+			url: config.APP.REST_WSPREFIX + '/api/users/eventos?accessToken2='+ accessToken,
 			type: 'GET'
 		}).then(function(data) {
 			var items = data.eventList.items;
