@@ -22,8 +22,8 @@
               <legend>Datos de contacto</legend>
               <div class="form__element">
                 <div class="row">
-                  <div class="form__element">
-                    <label for="email">Correo electrónico</label>
+                  <div class="form__element required">
+                    <label for="email">Correo electrónico*</label>
                     {{input id="email" type="email" value=email class="input-text"  }}      
                   </div>
                   <div class="form__element">
@@ -31,13 +31,9 @@
                     {{input id="displayName"  value=displayName class="input-text"  }}     
                   </div>
                   <div class="col-md-8">
-                    <label for="phoneNumber">Télefono</label>
+                    <label for="phoneNumber">Télefono*</label>
                     {{input id="phoneNumber" type="number" value=phoneNumber class="input-text"  }}    
-                  </div>
-                  <div class="col-md-4">
-                    <label for="phoneNumberExt">Télefono Secundario</label>
-                    {{input id="phoneNumberExt" type="number" value=phoneNumberExt class="input-text"  }}    
-                  </div>
+                  </div>                 
                   <div class="col-md-4">
                     <label for="city">Ciudad</label>
                     {{input id="city"  value=city class="input-text"  }} 
