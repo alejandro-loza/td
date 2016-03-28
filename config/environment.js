@@ -57,7 +57,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.APP.LS = 'ember_simple_auth:session';
     ENV.APP.REST_WSPREFIX = "http://tudu.m3x1c0.com:3000"; 
-    ENV.APP.TOKEN = "ya29.rQJsM_Ui_aB_wNLthmBsuPJwpGmjD6_cn-us-4bjHFmwNA_NWhzV0v8k6H3ED4WVgG4";
+    //ENV.APP.TOKEN = "ya29.rQJsM_Ui_aB_wNLthmBsuPJwpGmjD6_cn-us-4bjHFmwNA_NWhzV0v8k6H3ED4WVgG4";
   }
 
   if (environment === 'test') {
