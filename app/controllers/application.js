@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
             if (this.session.isAuthenticated) {
                 this.get('session').invalidate();
             } else {
-               this.set('accessToken', null) 
+                this.set('accessToken', null) 
             }
             localStorage.removeItem("accessToken");        
             localStorage.removeItem("ember_simple_auth:session");   
