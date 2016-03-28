@@ -24,9 +24,10 @@ module.exports = function(environment) {
     torii: {
       providers: {
         'google-oauth2': {
-          apiKey: "850796035254-j615vfpf98738l9eog82sqsiqdmbjnbu.apps.googleusercontent.com",        
-          secretKey: "me2c8LDcLMwjDOi6XAmU8nuf",
-          redirectUri: "http://localhost:4200/oauth2callback"
+          apiKey: "440411978331-9r2br912jti6tcc8ojn11mpoib41qh4b.apps.googleusercontent.com",        
+          secretKey: "-ykU4MbTrtjaI2gb0XE7oORn",
+          redirectUri: "http://localhost:4200/oauth2callback",
+          scope: 'email profile https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.readonly https://www.google.com/m8/feeds https://www.googleapis.com/auth/tasks'          
         }
       }
     },
